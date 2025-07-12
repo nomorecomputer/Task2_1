@@ -294,12 +294,23 @@ a {
   font-weight: 700;
 }
 
+.text-md {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
 .text-sm {
   font-size: 14px;
 }
 
 .text-primary-400 {
   color: var(--primary-400);
+}
+.text-neutral-600 {
+  color: var(--neutral-600);
+}
+.text-neutral-900 {
+  color: var(--neutral-900);
 }
 
 .text-danger {
@@ -353,7 +364,12 @@ a {
 .mb-48 {
   margin-bottom: 48px;
 }
-
+.mb-64 {
+  margin-bottom: 64px;
+}
+.me-24 {
+  margin-inline-end: 24px;
+}
 .me-40 {
   margin-inline-end: 40px;
 }
@@ -390,4 +406,9 @@ a {
   cursor: pointer;
   border: none;
   background-color: transparent;
+}
+
+.btn-dark {
+  background-color: var(--neutral-900);
+  color: var(--neutral-0);
 }

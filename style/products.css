@@ -133,3 +133,20 @@ table {
 .category .active {
   color: var(--primary-400);
 }
+
+.page-item .btn {
+  padding: 8px 15px;
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.page-item .active {
+  background-color: var(--primary-300);
+  font-weight: 500;
+}
+
+.trading-mark {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
