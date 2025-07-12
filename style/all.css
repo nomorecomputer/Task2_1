@@ -225,19 +225,3 @@ a {
 .me-48 {
   margin-inline-end: 48px;
 }
-
-.btn {
-  border-radius: 4px;
-  padding: 12px 24px;
-  font-size: 16;
-  line-height: 1.5;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
-.btn-dark {
-  background-color: var(--neutral-900);
-  color: var(--neutral-0);
-}
