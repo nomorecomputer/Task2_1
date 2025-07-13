@@ -1,17 +1,15 @@
 /*******  元件 ********/
 
 .breadcrumb-item + .breadcrumb-item::before {
-  /******************/
   content: "/";
   padding: 0 12px;
   color: var(--neutral-300);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .breadcrumb-item {
-  /***********/
   display: flex;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .breadcrumb-link {
@@ -26,10 +24,5 @@
   font-weight: 500;
   cursor: pointer;
   border: none;
-  background-color: transparent;
-}
-
-.btn-dark {
-  background-color: var(--neutral-900);
-  color: var(--neutral-0);
+  /* background-color: transparent; */
 }

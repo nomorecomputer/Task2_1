@@ -1,0 +1,241 @@
+/* first, duplicate to local draft in figma */
+
+/* secondly, observe and design the common css pattern */
+
+:root {
+  --primary-100: #f5fee7;
+  --primary-400: #57a203;
+  --primary-500: ##477a11;
+  --primary-0: #ffffff;
+  --neutral-100: #f8f9fa;
+  --neutral-300: #dee2e6;
+  --neutral-600: #6c757d;
+  --neutral-900: #212529;
+  --fs-h1: 40px;
+  --fs-h2: 32px;
+  --fs-h3: 28px;
+  --fs-h4: 24px;
+  --fs-h5: 20px;
+  --fs-md: 16px;
+  --fs-sm: 14px;
+}
+
+/*  標籤基本樣式設定 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* default is content-box */
+}
+
+/**********************************/
+img {
+  vertical-align: middle;
+}
+
+a {
+  color: var(--primary-400);
+  text-underline-offset: 4px; /****************/
+  display: block;
+}
+a:hover {
+  color: var(--primary-500);
+}
+
+/*************************/
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+/* 通用樣式 */
+/************ common tag => common style=>  ***********/
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+.h1 {
+  font-size: var(--fs-h1);
+}
+.h2 {
+  font-size: var(--fs-h2);
+}
+.h3 {
+  font-size: var(--fs-h3);
+}
+.h4 {
+  font-size: var(--fs-h4);
+}
+.h5 {
+  font-size: var(--fs-h5);
+}
+
+.text-md,
+.text-sm {
+  line-height: 1.5;
+  font-weight: 700;
+}
+.text-md {
+  font-size: var(--fs-md);
+}
+.text-sm {
+  font-size: var(--fs-sm);
+}
+.text-white {
+  color: var(--primary-0);
+}
+
+/**** Primary color : for CTA ( call to action, ex: purchase, subscribe,  add to cart, ...) less than 20% */
+/**** Neutral color: for text, table, ...not occupied visitor focus *****/
+/**** Functional color : danger, warning, success, info, ... *******/
+/******  text color ***********/
+.text-primary-400 {
+  color: var(--primary-400);
+}
+.text-neutra-600 {
+  color: var(--neutral-600);
+}
+
+.text-neutra-900 {
+  color: var(--neutral-900);
+}
+
+.bg-primary-100 {
+  background-color: var(--primary-100);
+}
+
+.bg-neutral-100 {
+  background-color: var(--neutral-100);
+}
+
+/*********** Spacing **************/
+/*** 1. observe : largest section, middle section, small section, etc... *******/
+/**** 2. set the rules, always push space down, push space to the right **********/
+/***** 3. 逐層觀察 外容器的padding、內容器的margin ****/
+
+.p-32 {
+  padding: 32px;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.py-48 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.py-64 {
+  /**** for 大外框  y 方向之內推 ****/
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.pb-48 {
+  padding-bottom: 48px;
+}
+
+.pl-8 {
+  padding-left: 8px;
+}
+.pl-12 {
+  padding-left: 12px;
+}
+.pl-24 {
+  padding-left: 24px;
+}
+
+/**** 由最外框的 padding, 內含第一層的 margin 逐層規劃 spacing ***/
+.pe-8 {
+  padding-inline-end: 8px;
+}
+.mb-4 {
+  margin-bottom: 4px;
+}
+.mb-12 {
+  margin-bottom: 12px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+/*********h1 tag has its sematic meaning in SEO, recommend to use only one h1 in a page ***/
+
+/***********  Page *************/
+.header {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week1/hero.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 151px 0;
+  text-align: center;
+}
+.eng-title {
+  font-size: 28px;
+}
+
+/****** plan the required container to limit the size ****/
+/*** key concerned( factors) : 
+  1.  resonable visual range
+  2.  reading confortable    
+   
+  how to decide the size of container ?
+   1. the max width of major portion ( allow small portion exception, use negative margion size
+   2. griding system 
+   3. width:1920px means full page, doesn't need add the full page container
+
+  */
+
+.container {
+  width: 856px;
+  margin: 0 auto;
+}
+
+.quote {
+  border-radius: 12px;
+  text-align: center;
+}
+
+.section-border {
+  border-bottom: 1px solid var(--neutral-300);
+}
+
+.intro img {
+  width: 1076px;
+  margin-left: -110px;
+  margin-right: -110px;
+}
+
+.milestone {
+  list-style-type: disc;
+}
+.milestone .item-seperator {
+  border-left: 1px solid var(--neutral-900);
+}
+
+.item-icon {
+  border-left: 3px solid var(--neutral-300);
+}
+
+.bi {
+  padding-right: 8px;
+  vertical-align: bottom;
+}
+
+.footer {
+  text-align: center;
+}
